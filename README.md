@@ -14,18 +14,34 @@ Downstream of the shared Relex MCP server. Base package:
 [GPT](https://github.com/relexyou/relex-gpt) ·
 [Gemini](https://github.com/relexyou/relex-gemini).
 
+## Official xAI / Grok names
+
+| Surface | Product calls it |
+|---------|------------------|
+| **grok.com** | **Connector** → New Connector → **Custom** |
+| **Grok Build** | **MCP server** and/or **plugin** |
+| **xAI API** | **Remote MCP tool** (`type: "mcp"`, `server_url`) |
+
+Always label **Relex**, URL `https://relex.you/api/mcp`.
+
 ## How it works
 
-Grok connects to the **remote MCP server** at `https://relex.you/api/mcp` via
-xAI **Remote MCP Tools** (Streaming HTTP / SSE). Two tools — `search` and
-`execute` — with a fixed ~1k-token footprint. Auth: **OAuth** when the host
-drives browser sign-in, or **Authorization bearer** (Relex API key) for API /
-headless use.
+Grok reaches the same MCP endpoint via Streamable HTTP. Two tools — `search` and
+`execute` — with a fixed ~1k-token footprint. Auth: **OAuth** (browser) on
+grok.com / Grok Build, or `authorization` / bearer **Relex API key** for xAI API
+/ headless.
 
 Party data is sealed client-side; documents are redacted client-side by
 default; `execute` refuses plaintext PII and returns deep links.
 
+OAuth detail for any host: https://relex.you/docs/connectors/mcp
+
 ## Quick start
+
+### grok.com Connectors
+
+1. [grok.com/connectors](https://grok.com/connectors) → **New Connector** → **Custom**
+2. URL `https://relex.you/api/mcp`, name **Relex** → complete OAuth
 
 ### xAI API (Responses / native SDK)
 
