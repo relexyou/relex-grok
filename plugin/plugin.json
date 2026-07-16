@@ -1,0 +1,15 @@
+{
+  "name": "relex-legal",
+  "displayName": "Relex Legal for Grok",
+  "version": "0.1.0",
+  "description": "Drive your Relex legal cases from Grok — read, reason, draft, and record over a PII-safe API. Clients' names and IDs are sealed with a key only the user holds; Grok only ever works with de-identified labels.",
+  "author": { "name": "Relex" },
+  "homepage": "https://relex.you/docs/connectors/grok",
+  "repository": "https://github.com/relexyou/relex-grok",
+  "license": "AGPL-3.0-or-later",
+  "keywords": ["legal", "case-management", "pii", "grok", "xai", "mcp", "sealed"],
+  "mcp": {
+    "url": "https://relex.you/api/mcp",
+    "transport": "http"
+  }
+}
