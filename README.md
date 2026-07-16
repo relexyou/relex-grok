@@ -71,22 +71,25 @@ With Relex API key (Settings → API Keys):
 }
 ```
 
-### Grok Build / local agent hosts
+### Grok Build (recommended)
 
-Add an HTTP MCP server:
-
-```json
-{
-  "mcpServers": {
-    "relex": {
-      "type": "http",
-      "url": "https://relex.you/api/mcp"
-    }
-  }
-}
+```bash
+grok plugin install relexyou/relex-grok#plugin --trust
+grok plugin enable relex-legal
+# Authenticate MCP (browser OAuth) via /mcps → relex → i, or:
+grok mcp add --transport http relex https://relex.you/api/mcp
 ```
 
-Load skills from `plugin/skills/` so Grok follows the PII-safe workflow.
+Or MCP-only:
+
+```toml
+# ~/.grok/config.toml
+[mcp_servers.relex]
+url = "https://relex.you/api/mcp"
+enabled = true
+```
+
+Full guide: [`docs/connect-grok-build.md`](docs/connect-grok-build.md).
 
 ## Personal vs Team
 

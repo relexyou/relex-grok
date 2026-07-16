@@ -1,0 +1,19 @@
+{
+  "name": "relex",
+  "owner": { "name": "Relex" },
+  "metadata": {
+    "description": "Relex — use Grok on legal matters without exposing client PII.",
+    "version": "0.1.1"
+  },
+  "plugins": [
+    {
+      "name": "relex-legal",
+      "source": "./plugin",
+      "description": "Drive your Relex legal cases from Grok over a PII-safe MCP API.",
+      "category": "legal",
+      "keywords": ["legal", "case-management", "pii", "grok", "mcp", "sealed"],
+      "homepage": "https://relex.you/docs/connectors/grok",
+      "repository": "https://github.com/relexyou/relex-grok"
+    }
+  ]
+}
