@@ -15,7 +15,7 @@ grok plugin install ./plugin --trust
 grok plugin enable relex-legal
 
 # 3. Register MCP (if not already from plugin)
-grok mcp add --transport http relex https://relex.you/api/mcp
+grok mcp add --transport http relex https://relex.legal/api/mcp
 
 # 4. Inspect
 grok plugin details relex-legal
@@ -33,8 +33,8 @@ grok mcp doctor relex
 
 | Check | Result |
 |-------|--------|
-| `POST https://relex.you/api/mcp` unauthenticated | `401` + `WWW-Authenticate: Bearer resource_metadata=…` |
-| `GET /.well-known/oauth-protected-resource` | OK — resource `https://relex.you/api/mcp` |
+| `POST https://relex.legal/api/mcp` unauthenticated | `401` + `WWW-Authenticate: Bearer resource_metadata=…` |
+| `GET /.well-known/oauth-protected-resource` | OK — resource `https://relex.legal/api/mcp` |
 | `GET /.well-known/oauth-authorization-server` | OK — authorize + token + register |
 | Dynamic client registration | OK — issued `client_id` |
 
@@ -53,7 +53,7 @@ After that, `grok mcp doctor relex` should report healthy tools `search` and
 API-key alternative (no browser):
 
 ```bash
-grok mcp add --transport http relex https://relex.you/api/mcp \
+grok mcp add --transport http relex https://relex.legal/api/mcp \
   --header "Authorization: Bearer rlx_..."
 ```
 

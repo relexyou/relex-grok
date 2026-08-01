@@ -4,7 +4,7 @@ Relex lets you use Grok on legal matters **without exposing client PII**.
 
 ## Authentication
 
-- MCP: `https://relex.you/api/mcp`
+- MCP: `https://relex.legal/api/mcp`
 - OAuth 2.1 + PKCE when the host supports browser auth
 - Relex API key as `authorization` / bearer for xAI remote MCP and CI
 - xAI API keys are separate from Relex credentials
@@ -17,4 +17,4 @@ Relex lets you use Grok on legal matters **without exposing client PII**.
 
 ## Reporting
 
-**security@relex.you**
+**security@relex.legal**

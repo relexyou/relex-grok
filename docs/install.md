@@ -3,7 +3,7 @@
 **MCP URL:**
 
 ```
-https://relex.you/api/mcp
+https://relex.legal/api/mcp
 ```
 
 ## Paths
@@ -28,7 +28,7 @@ from the Relex credential.
 
 ### Individual developer / solo lawyer
 
-1. Add remote MCP tool with `server_url=https://relex.you/api/mcp`,
+1. Add remote MCP tool with `server_url=https://relex.legal/api/mcp`,
    `server_label=relex`.
 2. Complete OAuth or attach your Relex API key.
 3. Prompt: *“Set up my practice workflow with Relex.”*

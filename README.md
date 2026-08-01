@@ -22,7 +22,7 @@ Downstream of the shared Relex MCP server. Base package:
 | **Grok Build** | **MCP server** and/or **plugin** |
 | **xAI API** | **Remote MCP tool** (`type: "mcp"`, `server_url`) |
 
-Always label **Relex**, URL `https://relex.you/api/mcp`.
+Always label **Relex**, URL `https://relex.legal/api/mcp`.
 
 ## How it works
 
@@ -34,14 +34,14 @@ grok.com / Grok Build, or `authorization` / bearer **Relex API key** for xAI API
 Party data is sealed client-side; documents are redacted client-side by
 default; `execute` refuses plaintext PII and returns deep links.
 
-OAuth detail for any host: https://relex.you/docs/connectors/mcp
+OAuth detail for any host: https://relex.legal/docs/connectors/mcp
 
 ## Quick start
 
 ### grok.com Connectors
 
 1. [grok.com/connectors](https://grok.com/connectors) → **New Connector** → **Custom**
-2. URL `https://relex.you/api/mcp`, name **Relex** → complete OAuth
+2. URL `https://relex.legal/api/mcp`, name **Relex** → complete OAuth
 
 ### xAI API (Responses / native SDK)
 
@@ -55,7 +55,7 @@ chat = client.chat.create(
     model="grok-4.5",
     tools=[
         mcp(
-            server_url="https://relex.you/api/mcp",
+            server_url="https://relex.legal/api/mcp",
             server_label="relex",
             server_description="Relex legal case management — PII-safe MCP",
             # For headless: pass a Relex API key
@@ -70,7 +70,7 @@ OpenAI-compatible Responses shape:
 ```json
 {
   "type": "mcp",
-  "server_url": "https://relex.you/api/mcp",
+  "server_url": "https://relex.legal/api/mcp",
   "server_label": "relex",
   "server_description": "Relex legal case management — PII-safe MCP"
 }
@@ -81,7 +81,7 @@ With Relex API key (Settings → API Keys):
 ```json
 {
   "type": "mcp",
-  "server_url": "https://relex.you/api/mcp",
+  "server_url": "https://relex.legal/api/mcp",
   "server_label": "relex",
   "authorization": "rlx_..."
 }
@@ -93,7 +93,7 @@ With Relex API key (Settings → API Keys):
 grok plugin install relexyou/relex-grok#plugin --trust
 grok plugin enable relex-legal
 # Authenticate MCP (browser OAuth) via /mcps → relex → i, or:
-grok mcp add --transport http relex https://relex.you/api/mcp
+grok mcp add --transport http relex https://relex.legal/api/mcp
 ```
 
 Or MCP-only:
@@ -101,7 +101,7 @@ Or MCP-only:
 ```toml
 # ~/.grok/config.toml
 [mcp_servers.relex]
-url = "https://relex.you/api/mcp"
+url = "https://relex.legal/api/mcp"
 enabled = true
 ```
 
@@ -138,11 +138,11 @@ relex-grok/
 └── SECURITY.md
 ```
 
-## Docs on relex.you
+## Docs on relex.legal
 
-- [Grok connector](https://relex.you/docs/connectors/grok)
-- [MCP Server](https://relex.you/docs/mcp)
-- [For AI Agents](https://relex.you/for-agents)
+- [Grok connector](https://relex.legal/docs/connectors/grok)
+- [MCP Server](https://relex.legal/docs/mcp)
+- [For AI Agents](https://relex.legal/for-agents)
 
 ## License
 

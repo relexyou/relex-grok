@@ -31,27 +31,27 @@ If the MCP server needs auth, open `/mcps` in the TUI and press **`i`** on
 ## Option B — MCP only (no plugin skills)
 
 ```bash
-grok mcp add --transport http relex https://relex.you/api/mcp
+grok mcp add --transport http relex https://relex.legal/api/mcp
 ```
 
 Equivalent `~/.grok/config.toml`:
 
 ```toml
 [mcp_servers.relex]
-url = "https://relex.you/api/mcp"
+url = "https://relex.legal/api/mcp"
 enabled = true
 ```
 
 API-key variant (Relex → **Settings → API Keys**):
 
 ```bash
-grok mcp add --transport http relex https://relex.you/api/mcp \
+grok mcp add --transport http relex https://relex.legal/api/mcp \
   --header "Authorization: Bearer rlx_..."
 ```
 
 ```toml
 [mcp_servers.relex]
-url = "https://relex.you/api/mcp"
+url = "https://relex.legal/api/mcp"
 enabled = true
 headers = { Authorization = "Bearer ${RELEX_API_KEY}" }
 ```
@@ -68,7 +68,7 @@ Commit a team-shared MCP entry:
 ```toml
 # .grok/config.toml
 [mcp_servers.relex]
-url = "https://relex.you/api/mcp"
+url = "https://relex.legal/api/mcp"
 enabled = true
 ```
 

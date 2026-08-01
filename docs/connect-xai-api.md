@@ -4,7 +4,7 @@ xAI **Remote MCP Tools** attach external MCP servers to Grok. Streaming HTTP
 and SSE are supported. Relex serves Streamable HTTP at:
 
 ```
-https://relex.you/api/mcp
+https://relex.legal/api/mcp
 ```
 
 ## Native xAI SDK
@@ -21,7 +21,7 @@ chat = client.chat.create(
     model="grok-4.5",
     tools=[
         mcp(
-            server_url="https://relex.you/api/mcp",
+            server_url="https://relex.legal/api/mcp",
             server_label="relex",
             server_description="Relex legal cases — search and execute over a PII-safe API",
             # Optional headless auth:
@@ -50,7 +50,7 @@ response = client.responses.create(
     tools=[
         {
             "type": "mcp",
-            "server_url": "https://relex.you/api/mcp",
+            "server_url": "https://relex.legal/api/mcp",
             "server_label": "relex",
             "server_description": "Relex legal case management",
             # "authorization": os.getenv("RELEX_API_KEY"),
@@ -66,7 +66,7 @@ Relex exposes only `search` and `execute`. You can pin them:
 
 ```python
 mcp(
-    server_url="https://relex.you/api/mcp",
+    server_url="https://relex.legal/api/mcp",
     server_label="relex",
     allowed_tool_names=["search", "execute"],
 )
