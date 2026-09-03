@@ -11,7 +11,7 @@ grok plugin validate ./plugin
 
 # 2. Install + enable
 grok plugin install ./plugin --trust
-# or: grok plugin install relexyou/relex-grok#plugin --trust
+# or: grok plugin install relexlegal/relex-grok#plugin --trust
 grok plugin enable relex-legal
 
 # 3. Register MCP (if not already from plugin)

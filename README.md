@@ -9,10 +9,10 @@ receiving PII**.
 > [`docs/positioning.md`](docs/positioning.md).
 
 Downstream of the shared Relex MCP server. Base package:
-[relexyou/relex-mcp](https://github.com/relexyou/relex-mcp). Sibling connectors:
-[Claude](https://github.com/relexyou/relex-claude) ·
-[GPT](https://github.com/relexyou/relex-gpt) ·
-[Gemini](https://github.com/relexyou/relex-gemini).
+[relexlegal/relex-mcp](https://github.com/relexlegal/relex-mcp). Sibling connectors:
+[Claude](https://github.com/relexlegal/relex-claude) ·
+[GPT](https://github.com/relexlegal/relex-gpt) ·
+[Gemini](https://github.com/relexlegal/relex-gemini).
 
 ## Official xAI / Grok names
 
@@ -90,7 +90,7 @@ With Relex API key (Settings → API Keys):
 ### Grok Build (recommended)
 
 ```bash
-grok plugin install relexyou/relex-grok#plugin --trust
+grok plugin install relexlegal/relex-grok#plugin --trust
 grok plugin enable relex-legal
 # Authenticate MCP (browser OAuth) via /mcps → relex → i, or:
 grok mcp add --transport http relex https://relex.legal/api/mcp

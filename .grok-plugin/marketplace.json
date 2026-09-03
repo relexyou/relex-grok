@@ -13,7 +13,7 @@
       "category": "legal",
       "keywords": ["legal", "case-management", "pii", "grok", "mcp", "sealed"],
       "homepage": "https://relex.legal/docs/connectors/grok",
-      "repository": "https://github.com/relexyou/relex-grok"
+      "repository": "https://github.com/relexlegal/relex-grok"
     }
   ]
 }

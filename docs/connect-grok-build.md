@@ -8,7 +8,7 @@ Installs skills, slash commands, and the remote MCP connector together.
 
 ```bash
 # From GitHub (plugin lives under plugin/)
-grok plugin install relexyou/relex-grok#plugin --trust
+grok plugin install relexlegal/relex-grok#plugin --trust
 
 # Or from a local clone
 grok plugin install /path/to/relex-grok/plugin --trust

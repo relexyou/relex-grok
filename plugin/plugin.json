@@ -8,7 +8,7 @@
     "url": "https://relex.legal"
   },
   "homepage": "https://relex.legal/docs/connectors/grok",
-  "repository": "https://github.com/relexyou/relex-grok",
+  "repository": "https://github.com/relexlegal/relex-grok",
   "license": "AGPL-3.0-or-later",
   "keywords": [
     "legal",
